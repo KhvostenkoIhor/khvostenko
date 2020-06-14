@@ -1,0 +1,1 @@
+print("Ostatok= " + str(int(input("Vvedite zarplatu ")) - int(input("Vvedite zadolzhennost' po kreditu ")) - int(input("Kommumal'nye platezhy "))))

@@ -1,0 +1,1 @@
+print(input("Vvedite 4-znachnoe chislo: ") [::-1])

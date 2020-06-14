@@ -1,0 +1,1 @@
+print(input("Vvedite 1-e chislo: ") + input("Vvedite 2-e chislo: ") + input("Vvedite 3-e chislo: "))

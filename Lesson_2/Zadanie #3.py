@@ -1,0 +1,1 @@
+print("Ploschad' romba= " + str(((int(input("Vvedite dlinu pervoy diagonali ")) * int(input("Vvedite dlinu vtoroy diagonali "))/2 ))))

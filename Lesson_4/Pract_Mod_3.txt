@@ -1,0 +1,8 @@
+a = int(input())
+b = int(input())
+if a > b:
+    a, b = b, a
+else:
+    pass
+for x in range(a, b):
+    print(x)
