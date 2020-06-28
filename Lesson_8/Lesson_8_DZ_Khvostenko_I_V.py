@@ -74,3 +74,5 @@ if lst_rezult == []:
 else:
 	print("Исходный список 1", lst_1, "Исходный список 2", lst_2, "Конечный список", lst_rezult, sep="\n")
 
+
+# Some comment
