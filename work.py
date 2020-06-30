@@ -98,14 +98,22 @@
 #foo()
 #print(os.__doc__)
 
-counter = 0
-a = 10
-def upd():
-    global counter, a
-    counter = counter + 1
-    print(counter)
-upd()
-print(counter)
+#counter = 0
+#a = 10
+#def upd():
+#    global counter, a
+#    counter = counter + 1
+#    print(counter)
+#upd()
+#print(counter)
+
+def foo():
+    var = 100
+    def nest():
+        nonlocal var
+        var += 100
+    print(var) 
+foo()
 
 
 
