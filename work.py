@@ -112,6 +112,7 @@ def foo():
     def nest():
         nonlocal var
         var += 100
+    nest()
     print(var) 
 foo()
 
