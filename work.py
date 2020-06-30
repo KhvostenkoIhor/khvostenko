@@ -99,8 +99,9 @@
 #print(os.__doc__)
 
 counter = 0
+a = 10
 def upd():
-    global counter
+    global counter, a
     counter = counter + 1
     print(counter)
 upd()
