@@ -89,7 +89,14 @@
 #e.kick()
 #print(e.hp)
 
+# Документация кода
 
+"""It is my module"""
+import os
+def foo():
+    print("Some text")
+foo()
+print(os.__doc__)
 
 
 
