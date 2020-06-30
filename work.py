@@ -107,14 +107,13 @@
 #upd()
 #print(counter)
 
-def foo():
-    var = 100
-    def nest():
-        nonlocal var
-        var += 100
-    nest()
-    print(var) 
-foo()
+def pow_fact(exp):
+    def power(base):
+        return base ** exp   
+    return power
+sque = pow_fact(2)
+print(sque)
+
 
 
 
