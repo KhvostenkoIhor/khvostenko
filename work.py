@@ -91,12 +91,20 @@
 
 # Документация кода
 
-"""It is my module"""
-import os
-def foo():
-    print("Some text")
-foo()
-print(os.__doc__)
+#"""It is my module"""
+#import os
+#def foo():
+#    print("Some text")
+#foo()
+#print(os.__doc__)
+
+counter = 0
+def upd():
+    global counter
+    counter = counter + 1
+    print(counter)
+upd()
+print(counter)
 
 
 
