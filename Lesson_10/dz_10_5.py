@@ -1,5 +1,7 @@
 import random
 def task_5(l1, l2):
+    """Формирует третий список из двух заданных
+    без повторяющихся элементов"""
     rez = []
     for i in l1:
         if i not in rez:

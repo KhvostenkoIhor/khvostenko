@@ -1,5 +1,7 @@
+
 import random
 def task_1(lst):
+    """Выводит произведение всех чисел в списке"""
     prod = 1
     print(lst)
     for i in lst:

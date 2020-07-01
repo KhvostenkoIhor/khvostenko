@@ -1,5 +1,7 @@
 import random
 def task_4():
+    """Возвращает количество удалённых
+    одинаковых элементов списка"""
     lst = [random.randint(0, 10) for i in range(10)]
     n = int(input("Введите число\n"))
     m = 0
