@@ -89,6 +89,30 @@
 #e.kick()
 #print(e.hp)
 
+# Документация кода
+
+#"""It is my module"""
+#import os
+#def foo():
+#    print("Some text")
+#foo()
+#print(os.__doc__)
+
+#counter = 0
+#a = 10
+#def upd():
+#    global counter, a
+#    counter = counter + 1
+#    print(counter)
+#upd()
+#print(counter)
+
+def pow_fact(exp):
+    def power(base):
+        return base ** exp   
+    return power
+sque = pow_fact(2)
+print(sque)
 
 
 
