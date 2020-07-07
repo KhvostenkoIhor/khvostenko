@@ -77,19 +77,69 @@
 #    return (a + b)**2
 #print(foo(2, 3))
 
-def make_code_better(foo):
-    def wrapper():
-        print("wrapper is started")
-        foo()
-        print("wrapper is ended")
-        #print("hello world")      
-    return wrapper 
-@make_code_better
-def foo():
-    print("My code is executing")
+#def make_code_better(foo):
+#    def wrapper():
+#        print("wrapper is started")
+#        foo()
+#        print("wrapper is ended")
+ #       #print("hello world")      
+#    return wrapper 
+#@make_code_better
+#def foo():
+ #   print("My code is executing")
 
-foo()
+#foo()
+# def connection(ip: str, port: int):
+#     def make_connection(printer_funk):
+#         print("*" * 10)
+#         print("Connect to IP: ", ip)
+#         print("Connect to port: ", port)
+#         def wrapper(model: str, color: str):
+#             print("*" * 10)
+#             print(model, "Connection")
+#             printer_func(model = model, color = color)
+#             print("*" * 10)
+#         return wrapper
+#     return make_connection
 
+# @connection(ip = "192.168.10.2", port = 5433)
+# def hp_printer(model: str, color: str):
+#    print("Model:", model)
+#    print("Color: ", color)
+   
+#    print("HP Printer Connection")
+
+# if __name__ == "__main__":
+#     # ! printer_models = ["hp", "samsung", "xiaomi"]
+#     hp = hp_printer
+#     hp(model = "HP", color="red")
+
+def bench(iters):
+    def decorator(func):
+        import time
+
+        def wrapper(*args, **kwargs):
+            total = 0
+            for i in range(iters):
+                start_time = time.time()
+                return_value = func(*args, **kwargs)
+                end_time = time.time()
+                total = total + (end_time - start_time)
+
+            print("The avarage of exec: ", total/iters)
+            return(return_value)
+        return wrapper
+    return decorator
+
+@bench(iters = 10)
+def fetch_webpage(url):
+    import requests
+    #a = "URL: " + url
+    webpage = requests.get(url)
+    return webpage.text
+
+webpage = fetch_webpage("https://google.com")
+print(webpage)
 
 
 
