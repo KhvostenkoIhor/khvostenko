@@ -57,18 +57,24 @@
 
 ###Сортировка вставками
 
-def insertion_sort(nums):
-    for i in range(1, len(nums)):
-        item_to_insert = nums[i]
-        #Зберігаємо посилання на індекс попереднього елемента
-        j = i - 1
-        while j >= 0 and nums[j] > item_to_insert:
-            nums[j + 1] = nums[j]
-            j -= 1
-        nums[j + 1] = item_to_insert
+# def insertion_sort(nums):
+    def wrapper(nums):
+#       for i in range(1, len(nums)):
+#           item_to_insert = nums[i]
+#           #Зберігаємо посилання на індекс попереднього елемента
+#           j = i - 1
+#           while j >= 0 and nums[j] > item_to_insert:
+#               nums[j + 1] = nums[j]
+#               j -= 1
+#           nums[j + 1] = item_to_insert
 
-ll = [9, 1, 15, 28, 6]
-print(ll)
-insertion_sort(ll)
-print(ll)
+# ll = [9, 1, 15, 28, 6]
+# print(ll)
+# insertion_sort(ll)
+# print(ll)
+@insertion_sort
+def  get_list_of_marks(marks):
+    return marks
+
+marks = get_list_of_marks(marks)
 
