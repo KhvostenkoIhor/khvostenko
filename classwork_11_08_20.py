@@ -94,8 +94,7 @@ def update_player(last_name):
             new_first = input(f'Enter first name ({first_name} - default)')
             new_last = input(f'Enter first name ({last_name} - default)')
             new_middle = input(f'Enter first name ({middle_name} - default)')
-            if new_first:
-                player['First name']
+
             
             
             return
