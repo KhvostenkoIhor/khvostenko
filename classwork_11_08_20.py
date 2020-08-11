@@ -67,7 +67,6 @@ def print_result(*args):
 
 def add_player(first_name, last_name, middle_name):
     global players
-
     player = {
         'First name': first_name,
         'Last name': last_name,
@@ -76,6 +75,30 @@ def add_player(first_name, last_name, middle_name):
     players.append(player)
     return player
 
+def del_player(last_name):
+    global players
+    for index, player in enumerate(players):
+        if player['last_name'] = last_name:
+            deleted_player = player
+            del(players[index])
+            return deleted_player
+
+def update_player(last_name):
+    global players
+
+    for index, player in enumerate(players):
+        if player['last_name'] = last_name:
+            first_name = player['First name']
+            last_name = player['Last name']
+            middle_name = player['Middle name']
+            new_first = input(f'Enter first name ({first_name} - default)')
+            new_last = input(f'Enter first name ({last_name} - default)')
+            new_middle = input(f'Enter first name ({middle_name} - default)')
+            if new_first:
+                player['First name']
+            
+            
+            return
 
 if __name__ == '__main__':
     
@@ -117,3 +140,12 @@ if __name__ == '__main__':
             )
             print_result(players)
 
+        elif choice == delete_player:
+            last_name = input('Enter players last_name: ')
+            player = del_player(last_name = last_name)
+            print_result(player)
+
+        elif choice == update_player:
+            last_name = input('Enter last name: ')
+            player = update_player(last_name = last_name)
+            print_result(player)
